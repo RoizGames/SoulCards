@@ -14,44 +14,44 @@ public class CardsStatistics {
     //AÇÕES
 
     //CARTAS NATUREZA
-    public void nat_cobre(){
+    public void nat_cobre() {
         champ.hp = champ.hp + 2;
         custo = 1;
     }
 
-    public void nat_alum(){
+    public void nat_alum() {
         champ.hp = champ.hp + 3;
         custo = 2;
     }
 
-    public void nat_ferro(){
+    public void nat_ferro() {
         champ.hp = champ.hp + 4;
         custo = 4;
     }
 
-    public void nat_ouro(){
+    public void nat_ouro() {
         champ.hp = champ.hp + 6;
         custo = 7;
     }
 //--------------------------------------------------------------------------------------//
 
     //CARTAS VAZIO
-    public void vazio_cobre(){
+    public void vazio_cobre() {
         enemy.hpEnemy = enemy.hpEnemy - 3;
         custo = 2;
     }
 
-    public void vazio_alum(){
+    public void vazio_alum() {
         enemy.hpEnemy = enemy.hpEnemy - 3;
         custo = 4;
     }
 
-    public void vazio_ferro(){
+    public void vazio_ferro() {
         enemy.hpEnemy = enemy.hpEnemy - 6;
         custo = 5;
     }
 
-    public void vazio_ouro(){
+    public void vazio_ouro() {
         enemy.hpEnemy = enemy.hpEnemy - 7;
         custo = 8;
     }
@@ -59,25 +59,25 @@ public class CardsStatistics {
 //-----------------------------------------------------------------------------------//
 
     //CARTAS LUZ
-    public void luz_cobre(){
+    public void luz_cobre() {
         enemy.hpEnemy = enemy.hpEnemy - 2;
         champ.hp = champ.hp + 1;
         custo = 3;
     }
 
-    public void luz_alum(){
+    public void luz_alum() {
         enemy.hpEnemy = enemy.hpEnemy - 2;  //FAZER DEVOLVER 25% DO DANO TOMADO
         champ.hp = champ.hp + 1;
         custo = 1;
     }
 
-    public void luz_ferro(){
+    public void luz_ferro() {
         enemy.hpEnemy = enemy.hpEnemy - 2; //FAZER MITIGAR O DANO SOFRIDO
         champ.hp = champ.hp + 1;
         custo = 3;
     }
 
-    public void luz_ouro(){
+    public void luz_ouro() {
         enemy.hpEnemy = enemy.hpEnemy - 5;
         champ.hp = champ.hp + 5;
         custo = 7;
@@ -86,13 +86,39 @@ public class CardsStatistics {
 //------------------------------------------------------------------------------------//
 
     //CARTAS UNIVERSO
-    public void universo_cobre(){
+    public void universo_cobre() {
         champ.escudo = champ.escudo + 3;
         custo = 2;
     }
 
-    public void universo_alum(){
+    public void universo_alum() {
         enemy.hpEnemy = enemy.hpEnemy + 3;
         custo = 2;
+    }
+
+    public void universo_ferro() {
+        champ.hp = champ.hp + (enemy.hpEnemy / 0.2);
+        enemy.hpEnemy = enemy.hpEnemy - (enemy.hpEnemy / 0.2);
+        custo = 1;
+    }
+
+    public void universo_ouro() {
+        champ.hp = champ.hp - (enemy.hpEnemy / 0.2); //FAZER TROCAR DE CARTA COM O CAMPEÃO E RESETAR A MÃO DO MESMO: APENAS UMA
+        enemy.hpEnemy = enemy.hpEnemy - (enemy.hpEnemy / 0.2);
+        custo = 1;
+    }
+
+    //------------------------------------------------------------------------------------//
+    //MISTURAS
+    public void vazio_luz_cobre() {
+        champ.hp = champ.hp - 3;
+        enemy.hpEnemy = enemy.hpEnemy - 3;
+        custo = 3;
+    }
+
+    public void vazio_luz_alum() {
+        champ.hp = champ.hp - 3; //FAZER COPIAR UMA CARTA DO SEU PROPRIO DECK
+        enemy.hpEnemy = enemy.hpEnemy - 3;
+        custo = 3;
     }
 }

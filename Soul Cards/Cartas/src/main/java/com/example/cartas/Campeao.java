@@ -1,7 +1,7 @@
 package com.example.cartas;
 
 public class Campeao {
-    int hp = 20;
+    double hp = 20;
     int energia = 1;
     int escudo = 0;
     String classe;
