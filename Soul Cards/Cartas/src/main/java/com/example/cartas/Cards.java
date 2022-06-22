@@ -1,7 +1,7 @@
 package com.example.cartas;
 
 public class Cards {
-    static int hp = 10;
+    static int hp = 5;
     static int custo;
 
     public static void main(String[] args) {
