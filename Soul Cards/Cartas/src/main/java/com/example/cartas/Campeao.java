@@ -6,7 +6,7 @@ public class Campeao {
     int escudo = 0;
     String classe;
 
-    public void montro(){
+    public void monstro(){
         Cartas c = new Cartas();
         Inimigo enemy = new Inimigo();
 

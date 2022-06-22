@@ -120,7 +120,6 @@ public class Cartas {
                 }
                 maoInimigo0 = new String[]{cartaInimigo1, cartaInimigo2, cartaInimigo3, cartaInimigo4, cartaInimigo5};
                 maoInimigo = Arrays.asList(maoInimigo0);
-
             }
 
             System.out.println("Suas Cartas são: "+maoCampeao);
@@ -145,7 +144,6 @@ public class Cartas {
                 encontrado = 0;
 
                 ultimaCarta = Carta2;
-
             }
             if (maoCampeao.contains(Carta3) && (Escolha.equals(Carta3)) && (encontrado == 1)) {
                 hpInimigo = hpInimigo - 3;

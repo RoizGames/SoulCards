@@ -7,6 +7,9 @@ public class CardsStatistics {
     String joia;
     String metal;
 
+    //CARTAS
+    String carta1;
+
 
     Campeao champ = new Campeao();
     Inimigo enemy = new Inimigo();
@@ -14,9 +17,10 @@ public class CardsStatistics {
     //AÇÕES
 
     //CARTAS NATUREZA
-    public void nat_cobre() {
+    public String nat_cobre() {
         champ.hp = champ.hp + 2;
         custo = 1;
+        return carta1;
     }
 
     public void nat_alum() {
