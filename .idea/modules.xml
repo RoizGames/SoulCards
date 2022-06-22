@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Soul Cards/Cartas/Cartas.iml" filepath="$PROJECT_DIR$/Soul Cards/Cartas/Cartas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SoulCards.iml" filepath="$PROJECT_DIR$/.idea/SoulCards.iml" />
+    </modules>
+  </component>
+</project>
