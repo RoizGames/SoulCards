@@ -1,96 +1,80 @@
 package com.example.cartas;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
-
-
 
 public class HelloController {
 
+    @FXML
+    private ImageView carta1;
 
     @FXML
-    private Button JogadorCarta1;
+    private ImageView carta2;
 
     @FXML
-    private Button JogadorCarta2;
+    private ImageView carta3;
 
     @FXML
-    private Button JogadorCarta3;
+    private ImageView carta4;
 
     @FXML
-    private Button JogadorCarta4;
+    private ImageView carta5;
 
     @FXML
-    private Button JogadorCarta5;
+    private ImageView carta6;
 
     @FXML
-    private ImageView carta1231;
+    private ImageView carta7;
 
     @FXML
-    private static Text hpInimigoShow;
+    private ImageView carta8;
 
     @FXML
-    private Text hpShow;
+    private ImageView imageCartaDois;
 
     @FXML
-    private ImageView imageCarta1;
+    private ImageView imageCartaQuatro;
 
     @FXML
-    private ImageView imageCarta2;
+    private ImageView imageCartaTres;
 
     @FXML
-    private ImageView imageCarta3;
+    private ImageView imageCartaUm;
 
     @FXML
-    private ImageView imageCarta4;
+    private ImageView imageCartaZero;
 
     @FXML
-    private ImageView imageCarta5;
+    private ImageView imageDeck;
 
     @FXML
-    private ImageView imageCartaInimigo;
-
-    public static void main(String[] args) {
-        int hp = 1;
-        while(hp>0){
-
-        }
-    }
-    @FXML
-    void JogadorCarta1(ActionEvent event) {
-
-    }
-
-
-
-
-
-    @FXML
-    void JogadorCarta2(ActionEvent event) {
+    void imageCartaDois(MouseEvent event) {
 
     }
 
     @FXML
-    void JogadorCarta3(ActionEvent event) {
+    void imageCartaQuatro(MouseEvent event) {
 
     }
 
     @FXML
-    void JogadorCarta4(ActionEvent event) {
+    void imageCartaTres(MouseEvent event) {
 
     }
 
     @FXML
-    void JogadorCarta5(ActionEvent event) {
+    void imageCartaUm(MouseEvent event) {
 
     }
 
     @FXML
-    void carta123(MouseEvent event) {
+    void imageCartaZero(MouseEvent event) {
+
+    }
+
+    @FXML
+    void imageDeck(MouseEvent event) {
 
     }
 
