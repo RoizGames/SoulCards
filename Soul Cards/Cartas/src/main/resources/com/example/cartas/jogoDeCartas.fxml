@@ -1,14 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.cartas.HelloController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cartas.JogoDeCartas">
+   <children>
+      <ImageView fx:id="imageDeck" fitHeight="100.0" fitWidth="150.0" layoutX="14.0" layoutY="486.0" onMouseClicked="#imageDeck" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../java/com/example/cartas/imagens/carta.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageCartaDois" fitHeight="100.0" fitWidth="150.0" layoutX="367.0" layoutY="436.0" onMouseClicked="#imageCartaDois" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../java/com/example/cartas/imagens/carta.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageCartaUm" fitHeight="100.0" fitWidth="150.0" layoutX="260.0" layoutY="436.0" onMouseClicked="#imageCartaUm" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../java/com/example/cartas/imagens/carta.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageCartaQuatro" fitHeight="100.0" fitWidth="150.0" layoutX="567.0" layoutY="436.0" onMouseClicked="#imageCartaQuatro" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../java/com/example/cartas/imagens/carta.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageCartaTres" fitHeight="100.0" fitWidth="150.0" layoutX="471.0" layoutY="436.0" onMouseClicked="#imageCartaTres" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../java/com/example/cartas/imagens/carta.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageCartaZero" fitHeight="100.0" fitWidth="150.0" layoutX="150.0" layoutY="436.0" onMouseClicked="#imageCartaZero" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../java/com/example/cartas/imagens/carta.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="carta3" fitHeight="100.0" fitWidth="150.0" layoutX="150.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../java/com/example/cartas/imagens/carta3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="carta7" fitHeight="100.0" fitWidth="150.0" layoutX="450.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../java/com/example/cartas/imagens/carta7.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="carta8" fitHeight="100.0" fitWidth="150.0" layoutX="471.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../java/com/example/cartas/imagens/carta8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="carta5" fitHeight="100.0" fitWidth="150.0" layoutX="331.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../java/com/example/cartas/imagens/carta5.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="carta6" fitHeight="100.0" fitWidth="150.0" layoutX="367.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../java/com/example/cartas/imagens/carta6.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="carta2" fitHeight="100.0" fitWidth="150.0" layoutX="60.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../java/com/example/cartas/imagens/carta2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="carta1" fitHeight="100.0" fitWidth="150.0" layoutX="24.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../java/com/example/cartas/imagens/carta1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="carta4" fitHeight="100.0" fitWidth="150.0" layoutX="211.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../java/com/example/cartas/imagens/carta4.png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
