@@ -31,7 +31,7 @@ public class CardsAdm {
     //MATRIZES CAMPEAO
     public String[] cartas = {Carta1, Carta2, Carta3, Carta4, Carta5, Carta6, Carta7, Carta8};
     public String[] maoCampeao0 = {CampeaoSlot1, CampeaoSlot2, CampeaoSlot3, CampeaoSlot4, CampeaoSlot5};
-    List<String> maoCampeao = Arrays.asList();
+    public List<String> maoCampeao = Arrays.asList();
 
     //SLOTS INIMIGO
     public String InimigoSlot1 = "vazio";
@@ -47,7 +47,10 @@ public class CardsAdm {
 
     public List<String> maoInimigo = Arrays.asList(maoInimigo0);
 
-
+    
+    Campeao champ = new Campeao();
+    Inimigo enemy = new Inimigo();
+    public String Escolha;
 
     //METODO DE SORTEIO CARTAS DO CAMPEAO
     public void SorteioCartasCampeao() {
@@ -135,4 +138,590 @@ public class CardsAdm {
             maoInimigo = Arrays.asList(maoInimigo0);
         }
     }
+
+    public void Batalha(){
+        int encontrado = 1;
+        if (maoCampeao.contains(Carta1) && (Escolha.equals(Carta1)) && (encontrado == 1)) {
+            enemy.hpInimigo = enemy.hpInimigo - 1;
+            encontrado = 0;
+
+            ultimaCartaCampeao = Carta1;
+        }
+        if (maoCampeao.contains(Carta2) && (Escolha.equals(Carta2)) && (encontrado == 1)) {
+            enemy.hpInimigo = enemy.hpInimigo - 2;
+            encontrado = 0;
+
+            ultimaCartaCampeao = Carta2;
+        }
+        if (maoCampeao.contains(Carta3) && (Escolha.equals(Carta3)) && (encontrado == 1)) {
+            enemy.hpInimigo = enemy.hpInimigo - 3;
+            encontrado = 0;
+
+            ultimaCartaCampeao = Carta3;
+        }
+        if (maoCampeao.contains(Carta4) && (Escolha.equals(Carta4)) && (encontrado == 1)) {
+            enemy.hpInimigo = enemy.hpInimigo - 4;
+            encontrado = 0;
+
+            ultimaCartaCampeao = Carta4;
+        }
+        if (maoCampeao.contains(Carta5) && (Escolha.equals(Carta5)) && (encontrado == 1)) {
+            enemy.hpInimigo = enemy.hpInimigo - 5;
+            encontrado = 0;
+
+            ultimaCartaCampeao = Carta5;
+        }
+        if (maoCampeao.contains(Carta6) && (Escolha.equals(Carta6)) && (encontrado == 1)) {
+            enemy.hpInimigo = enemy.hpInimigo - 6;
+            encontrado = 0;
+
+            ultimaCartaCampeao = Carta6;
+        }
+        if (maoCampeao.contains(Carta7) && (Escolha.equals(Carta7)) && (encontrado == 1)) {
+            enemy.hpInimigo = enemy.hpInimigo - 7;
+            encontrado = 0;
+
+            ultimaCartaCampeao = Carta7;
+        }
+        if (maoCampeao.contains(Carta8) && (Escolha.equals(Carta8)) && (encontrado == 1)) {
+            enemy.hpInimigo = enemy.hpInimigo - 8;
+            encontrado = 0;
+
+            ultimaCartaCampeao = Carta8;
+        }
+        if (encontrado == 1) {
+            System.out.println("Carta inexistente.");
+        }
+        System.out.println(enemy.hpInimigo);
+
+
+    }
+    public void AtaqueInimigo(){
+        int encontrado = 0;
+        if (Escolha.equals(Carta1) && (encontrado == 0)) {
+            if (maoInimigo.contains(Carta1)) {
+                champ.hp = champ.hp - 1;
+                System.out.println("Inimigo usou a Carta1.");
+                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                ultimaCartaInimigo = Carta1;
+            } else {
+                if (maoInimigo.contains(Carta2)) {
+                    champ.hp = champ.hp - 2;
+                    System.out.println("Inimigo usou a Carta2.");
+                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                    ultimaCartaInimigo = Carta2;
+                } else {
+                    if (maoInimigo.contains(Carta3)) {
+                        champ.hp = champ.hp - 3;
+                        System.out.println("Inimigo usou a Carta3.");
+                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                        ultimaCartaInimigo = Carta3;
+                    } else {
+                        if (maoInimigo.contains(Carta4)) {
+                            champ.hp = champ.hp - 4;
+                            System.out.println("Inimigo usou a Carta4.");
+                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                            ultimaCartaInimigo = Carta4;
+                        } else {
+                            if (maoInimigo.contains(Carta5)) {
+                                champ.hp = champ.hp - 5;
+                                System.out.println("Inimigo usou a Carta5.");
+                                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                ultimaCartaInimigo = Carta5;
+                            } else {
+                                if (maoInimigo.contains(Carta6)) {
+                                    champ.hp = champ.hp - 6;
+                                    System.out.println("Inimigo usou a Carta6.");
+                                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                    ultimaCartaInimigo = Carta6;
+                                } else {
+                                    if (maoInimigo.contains(Carta7)) {
+                                        champ.hp = champ.hp - 7;
+                                        System.out.println("Inimigo usou a Carta7.");
+                                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                        ultimaCartaInimigo = Carta7;
+                                    } else {
+                                        if (maoInimigo.contains(Carta8)) {
+                                            champ.hp = champ.hp - 8;
+                                            System.out.println("Inimigo usou a Carta8.");
+                                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                            ultimaCartaInimigo = Carta8;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        if (Escolha.equals(Carta2) && (encontrado == 0)) {
+            if (maoInimigo.contains(Carta1)) {
+                champ.hp = champ.hp - 1;
+                System.out.println("Inimigo usou a Carta1.");
+                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                ultimaCartaInimigo = Carta1;
+            } else {
+                if (maoInimigo.contains(Carta2)) {
+                    champ.hp = champ.hp - 2;
+                    System.out.println("Inimigo usou a Carta2.");
+                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                    ultimaCartaInimigo = Carta2;
+                } else {
+                    if (maoInimigo.contains(Carta3)) {
+                        champ.hp = champ.hp - 3;
+                        System.out.println("Inimigo usou a Carta3.");
+                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                        ultimaCartaInimigo = Carta3;
+                    } else {
+                        if (maoInimigo.contains(Carta4)) {
+                            champ.hp = champ.hp - 4;
+                            System.out.println("Inimigo usou a Carta4.");
+                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                            ultimaCartaInimigo = Carta4;
+                        } else {
+                            if (maoInimigo.contains(Carta5)) {
+                                champ.hp = champ.hp - 5;
+                                System.out.println("Inimigo usou a Carta5.");
+                                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                ultimaCartaInimigo = Carta5;
+                            } else {
+                                if (maoInimigo.contains(Carta6)) {
+                                    champ.hp = champ.hp - 6;
+                                    System.out.println("Inimigo usou a Carta6.");
+                                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                    ultimaCartaInimigo = Carta6;
+                                } else {
+                                    if (maoInimigo.contains(Carta7)) {
+                                        champ.hp = champ.hp - 7;
+                                        System.out.println("Inimigo usou a Carta7.");
+                                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                        ultimaCartaInimigo = Carta7;
+                                    } else {
+                                        if (maoInimigo.contains(Carta8)) {
+                                            champ.hp = champ.hp - 8;
+                                            System.out.println("Inimigo usou a Carta8.");
+                                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                            ultimaCartaInimigo = Carta8;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (Escolha.equals(Carta3) && (encontrado == 0)) {
+            if (maoInimigo.contains(Carta1)) {
+                champ.hp = champ.hp - 1;
+                System.out.println("Inimigo usou a Carta1.");
+                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                ultimaCartaInimigo = Carta1;
+            } else {
+                if (maoInimigo.contains(Carta2)) {
+                    champ.hp = champ.hp - 2;
+                    System.out.println("Inimigo usou a Carta2.");
+                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                    ultimaCartaInimigo = Carta2;
+                } else {
+                    if (maoInimigo.contains(Carta3)) {
+                        champ.hp = champ.hp - 3;
+                        System.out.println("Inimigo usou a Carta3.");
+                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                        ultimaCartaInimigo = Carta3;
+                    } else {
+                        if (maoInimigo.contains(Carta4)) {
+                            champ.hp = champ.hp - 4;
+                            System.out.println("Inimigo usou a Carta4.");
+                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                            ultimaCartaInimigo = Carta4;
+                        } else {
+                            if (maoInimigo.contains(Carta5)) {
+                                champ.hp = champ.hp - 5;
+                                System.out.println("Inimigo usou a Carta5.");
+                                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                ultimaCartaInimigo = Carta5;
+                            } else {
+                                if (maoInimigo.contains(Carta6)) {
+                                    champ.hp = champ.hp - 6;
+                                    System.out.println("Inimigo usou a Carta6.");
+                                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                    ultimaCartaInimigo = Carta6;
+                                } else {
+                                    if (maoInimigo.contains(Carta7)) {
+                                        champ.hp = champ.hp - 7;
+                                        System.out.println("Inimigo usou a Carta7.");
+                                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                        ultimaCartaInimigo = Carta7;
+                                    } else {
+                                        if (maoInimigo.contains(Carta8)) {
+                                            champ.hp = champ.hp - 8;
+                                            System.out.println("Inimigo usou a Carta8.");
+                                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                            ultimaCartaInimigo = Carta8;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (Escolha.equals(Carta4) && (encontrado == 0)) {
+            if (maoInimigo.contains(Carta1)) {
+                champ.hp = champ.hp - 1;
+                System.out.println("Inimigo usou a Carta1.");
+                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                ultimaCartaInimigo = Carta1;
+            } else {
+                if (maoInimigo.contains(Carta2)) {
+                    champ.hp = champ.hp - 2;
+                    System.out.println("Inimigo usou a Carta2.");
+                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                    ultimaCartaInimigo = Carta2;
+                } else {
+                    if (maoInimigo.contains(Carta3)) {
+                        champ.hp = champ.hp - 3;
+                        System.out.println("Inimigo usou a Carta3.");
+                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                        ultimaCartaInimigo = Carta3;
+                    } else {
+                        if (maoInimigo.contains(Carta4)) {
+                            champ.hp = champ.hp - 4;
+                            System.out.println("Inimigo usou a Carta4.");
+                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                            ultimaCartaInimigo = Carta4;
+                        } else {
+                            if (maoInimigo.contains(Carta5)) {
+                                champ.hp = champ.hp - 5;
+                                System.out.println("Inimigo usou a Carta5.");
+                                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                ultimaCartaInimigo = Carta5;
+                            } else {
+                                if (maoInimigo.contains(Carta6)) {
+                                    champ.hp = champ.hp - 6;
+                                    System.out.println("Inimigo usou a Carta6.");
+                                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                    ultimaCartaInimigo = Carta6;
+                                } else {
+                                    if (maoInimigo.contains(Carta7)) {
+                                        champ.hp = champ.hp - 7;
+                                        System.out.println("Inimigo usou a Carta7.");
+                                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                        ultimaCartaInimigo = Carta7;
+                                    } else {
+                                        if (maoInimigo.contains(Carta8)) {
+                                            champ.hp = champ.hp - 8;
+                                            System.out.println("Inimigo usou a Carta8.");
+                                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                            ultimaCartaInimigo = Carta8;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (Escolha.equals(Carta5) && (encontrado == 0)) {
+            if (maoInimigo.contains(Carta1)) {
+                champ.hp = champ.hp - 1;
+                System.out.println("Inimigo usou a Carta1.");
+                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                ultimaCartaInimigo = Carta1;
+            } else {
+                if (maoInimigo.contains(Carta2)) {
+                    champ.hp = champ.hp - 2;
+                    System.out.println("Inimigo usou a Carta2.");
+                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                    ultimaCartaInimigo = Carta2;
+                } else {
+                    if (maoInimigo.contains(Carta3)) {
+                        champ.hp = champ.hp - 3;
+                        System.out.println("Inimigo usou a Carta3.");
+                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                        ultimaCartaInimigo = Carta3;
+                    } else {
+                        if (maoInimigo.contains(Carta4)) {
+                            champ.hp = champ.hp - 4;
+                            System.out.println("Inimigo usou a Carta4.");
+                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                            ultimaCartaInimigo = Carta4;
+                        } else {
+                            if (maoInimigo.contains(Carta5)) {
+                                champ.hp = champ.hp - 5;
+                                System.out.println("Inimigo usou a Carta5.");
+                                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                ultimaCartaInimigo = Carta5;
+                            } else {
+                                if (maoInimigo.contains(Carta6)) {
+                                    champ.hp = champ.hp - 6;
+                                    System.out.println("Inimigo usou a Carta6.");
+                                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                    ultimaCartaInimigo = Carta6;
+                                } else {
+                                    if (maoInimigo.contains(Carta7)) {
+                                        champ.hp = champ.hp - 7;
+                                        System.out.println("Inimigo usou a Carta7.");
+                                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                        ultimaCartaInimigo = Carta7;
+                                    } else {
+                                        if (maoInimigo.contains(Carta8)) {
+                                            champ.hp = champ.hp - 8;
+                                            System.out.println("Inimigo usou a Carta8.");
+                                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                            ultimaCartaInimigo = Carta8;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (Escolha.equals(Carta6) && (encontrado == 0)) {
+            if (maoInimigo.contains(Carta1)) {
+                champ.hp = champ.hp - 1;
+                System.out.println("Inimigo usou a Carta1.");
+                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                ultimaCartaInimigo = Carta1;
+            } else {
+                if (maoInimigo.contains(Carta2)) {
+                    champ.hp = champ.hp - 2;
+                    System.out.println("Inimigo usou a Carta2.");
+                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                    ultimaCartaInimigo = Carta2;
+                } else {
+                    if (maoInimigo.contains(Carta3)) {
+                        champ.hp = champ.hp - 3;
+                        System.out.println("Inimigo usou a Carta3.");
+                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                        ultimaCartaInimigo = Carta3;
+                    } else {
+                        if (maoInimigo.contains(Carta4)) {
+                            champ.hp = champ.hp - 4;
+                            System.out.println("Inimigo usou a Carta4.");
+                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                            ultimaCartaInimigo = Carta4;
+                        } else {
+                            if (maoInimigo.contains(Carta5)) {
+                                champ.hp = champ.hp - 5;
+                                System.out.println("Inimigo usou a Carta5.");
+                                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                ultimaCartaInimigo = Carta5;
+                            } else {
+                                if (maoInimigo.contains(Carta6)) {
+                                    champ.hp = champ.hp - 6;
+                                    System.out.println("Inimigo usou a Carta6.");
+                                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                    ultimaCartaInimigo = Carta6;
+                                } else {
+                                    if (maoInimigo.contains(Carta7)) {
+                                        champ.hp = champ.hp - 7;
+                                        System.out.println("Inimigo usou a Carta7.");
+                                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                        ultimaCartaInimigo = Carta7;
+                                    } else {
+                                        if (maoInimigo.contains(Carta8)) {
+                                            champ.hp = champ.hp - 8;
+                                            System.out.println("Inimigo usou a Carta8.");
+                                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                            ultimaCartaInimigo = Carta8;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (Escolha.equals(Carta7) && (encontrado == 0)) {
+            if (maoInimigo.contains(Carta1)) {
+                champ.hp = champ.hp - 1;
+                System.out.println("Inimigo usou a Carta1.");
+                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                ultimaCartaInimigo = Carta1;
+            } else {
+                if (maoInimigo.contains(Carta2)) {
+                    champ.hp = champ.hp - 2;
+                    System.out.println("Inimigo usou a Carta2.");
+                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                    ultimaCartaInimigo = Carta2;
+                } else {
+                    if (maoInimigo.contains(Carta3)) {
+                        champ.hp = champ.hp - 3;
+                        System.out.println("Inimigo usou a Carta3.");
+                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                        ultimaCartaInimigo = Carta3;
+                    } else {
+                        if (maoInimigo.contains(Carta4)) {
+                            champ.hp = champ.hp - 4;
+                            System.out.println("Inimigo usou a Carta4.");
+                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                            ultimaCartaInimigo = Carta4;
+                        } else {
+                            if (maoInimigo.contains(Carta5)) {
+                                champ.hp = champ.hp - 5;
+                                System.out.println("Inimigo usou a Carta5.");
+                                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                ultimaCartaInimigo = Carta5;
+                            } else {
+                                if (maoInimigo.contains(Carta6)) {
+                                    champ.hp = champ.hp - 6;
+                                    System.out.println("Inimigo usou a Carta6.");
+                                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                    ultimaCartaInimigo = Carta6;
+                                } else {
+                                    if (maoInimigo.contains(Carta7)) {
+                                        champ.hp = champ.hp - 7;
+                                        System.out.println("Inimigo usou a Carta7.");
+                                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                        ultimaCartaInimigo = Carta7;
+                                    } else {
+                                        if (maoInimigo.contains(Carta8)) {
+                                            champ.hp = champ.hp - 8;
+                                            System.out.println("Inimigo usou a Carta8.");
+                                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                            ultimaCartaInimigo = Carta8;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (Escolha.equals(Carta8) && (encontrado == 0)) {
+            if (maoInimigo.contains(Carta1)) {
+                champ.hp = champ.hp - 1;
+                System.out.println("Inimigo usou a Carta1.");
+                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                ultimaCartaInimigo = Carta1;
+            } else {
+                if (maoInimigo.contains(Carta2)) {
+                    champ.hp = champ.hp - 2;
+                    System.out.println("Inimigo usou a Carta2.");
+                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                    ultimaCartaInimigo = Carta2;
+                } else {
+                    if (maoInimigo.contains(Carta3)) {
+                        champ.hp = champ.hp - 3;
+                        System.out.println("Inimigo usou a Carta3.");
+                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                        ultimaCartaInimigo = Carta3;
+                    } else {
+                        if (maoInimigo.contains(Carta4)) {
+                            champ.hp = champ.hp - 4;
+                            System.out.println("Inimigo usou a Carta4.");
+                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                            ultimaCartaInimigo = Carta4;
+                        } else {
+                            if (maoInimigo.contains(Carta5)) {
+                                champ.hp = champ.hp - 5;
+                                System.out.println("Inimigo usou a Carta5.");
+                                System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                ultimaCartaInimigo = Carta5;
+                            } else {
+                                if (maoInimigo.contains(Carta6)) {
+                                    champ.hp = champ.hp - 6;
+                                    System.out.println("Inimigo usou a Carta6.");
+                                    System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                    ultimaCartaInimigo = Carta6;
+                                } else {
+                                    if (maoInimigo.contains(Carta7)) {
+                                        champ.hp = champ.hp - 7;
+                                        System.out.println("Inimigo usou a Carta7.");
+                                        System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                        ultimaCartaInimigo = Carta7;
+                                    } else {
+                                        if (maoInimigo.contains(Carta8)) {
+                                            champ.hp = champ.hp - 8;
+                                            System.out.println("Inimigo usou a Carta8.");
+                                            System.out.println("Seu champ.hp agora está em: " + champ.hp);
+
+                                            ultimaCartaInimigo = Carta8;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        System.out.println(champ.hp);
+    }
+
 }

@@ -7,6 +7,7 @@ import javafx.scene.input.MouseEvent;
 public class HelloController {
     CardsAdm ca = new CardsAdm();
 
+
     @FXML
     private ImageView carta1;
 
@@ -51,28 +52,35 @@ public class HelloController {
 
     @FXML
     void imageCartaDois(MouseEvent event) {
-
+        ca.Escolha = ca.CampeaoSlot3;
+        ca.Batalha();
     }
 
     @FXML
     void imageCartaQuatro(MouseEvent event) {
-
+        ca.Escolha = ca.CampeaoSlot5;
+        ca.Batalha();
     }
 
     @FXML
     void imageCartaTres(MouseEvent event) {
+        ca.Escolha = ca.CampeaoSlot4;
+        ca.Batalha();
 
     }
 
     @FXML
     void imageCartaUm(MouseEvent event) {
-
+        ca.Escolha = ca.CampeaoSlot2;
+        ca.Batalha();
 
     }
 
     @FXML
     void imageCartaZero(MouseEvent event) {
-        System.out.println(ca.CampeaoSlot1);
+        ca.Escolha = ca.CampeaoSlot1;
+        ca.Batalha();
+
     }
 
 

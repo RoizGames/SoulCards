@@ -11,7 +11,7 @@ public class Campeao {
         Inimigo enemy = new Inimigo();
 
         while(c.round < c.round+3){
-            enemy.hpEnemy = enemy.hpEnemy - 1;
+            enemy.hpInimigo = enemy.hpInimigo - 1;
         }
     }
 }
