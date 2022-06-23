@@ -27,7 +27,7 @@ public class Cartas {
         String[] cartasInimigo = {Carta1,Carta2,Carta3,Carta4,Carta5,Carta6,Carta7,Carta8};
 
         //CARTAS CAMPEAO
-        StringCampeaoSlot1 = "vazio";
+        String Slot1 = "vazio";
         String Slot2 = "vazio";
         String Slot3 = "vazio";
         String Slot4 = "vazio";
@@ -47,7 +47,7 @@ public class Cartas {
         while(hp>0&&hpInimigo>0) {
         if(Slot1.equals("vazio")) {
             //Sorteio Cartas Campeao
-           CampeaoSlot1 = cartas[(int) (Math.random() * 8)];
+            Slot1 = cartas[(int) (Math.random() * 8)];
             Slot2 = cartas[(int) (Math.random() * 8)];
             Slot3 = cartas[(int) (Math.random() * 8)];
             Slot4 = cartas[(int) (Math.random() * 8)];
@@ -76,7 +76,7 @@ public class Cartas {
                 int reposicao = maoCampeao.indexOf("Sem carta");
 
                 if(reposicao==0){
-                   CampeaoSlot1 = cartas[(int) (Math.random() * 8)];
+                   Slot1 = cartas[(int) (Math.random() * 8)];
                     System.out.println("Você ganhou a carta: "+Slot1);
                 }
                 if(reposicao==1){
@@ -721,7 +721,7 @@ public class Cartas {
             int delete = maoCampeao.indexOf(ultimaCartaCampeao);
             int deleteOk = 0;
             if(delete==0){
-               CampeaoSlot1 = "Sem carta";
+               Slot1 = "Sem carta";
                 deleteOk = 1;
             }
             if(delete==1 &&  deleteOk == 0){
