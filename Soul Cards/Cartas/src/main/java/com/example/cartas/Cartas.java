@@ -8,7 +8,7 @@ public class Cartas {
     int round = 0;
     public static void main(String[] args) {
         int hp = 20;
-        int hpInimigo = 20000;
+        int hpInimigo = 20;
 
 
         String Carta1 = "Carta1";
@@ -20,54 +20,54 @@ public class Cartas {
         String Carta7 = "Carta7";
         String Carta8 = "Carta8";
 
-        String ultimaCarta = null;
+        String ultimaCartaCampeao = null;
         String ultimaCartaInimigo = null;
 
         String[] cartas = {Carta1,Carta2,Carta3,Carta4,Carta5,Carta6,Carta7,Carta8};
         String[] cartasInimigo = {Carta1,Carta2,Carta3,Carta4,Carta5,Carta6,Carta7,Carta8};
 
         //CARTAS CAMPEAO
-        String cartaCampeao1 = "vazio";
-        String cartaCampeao2 = "vazio";
-        String cartaCampeao3 = "vazio";
-        String cartaCampeao4 = "vazio";
-        String cartaCampeao5 = "vazio";
+        StringCampeaoSlot1 = "vazio";
+        String Slot2 = "vazio";
+        String Slot3 = "vazio";
+        String Slot4 = "vazio";
+        String Slot5 = "vazio";
 
         //CARTAS INIMIGO
-        String cartaInimigo1 = "vazio";
-        String cartaInimigo2 = "vazio";
-        String cartaInimigo3 = "vazio";
-        String cartaInimigo4 = "vazio";
-        String cartaInimigo5 = "vazio";
+        String InimigoSlot1 = "vazio";
+        String InimigoSlot2 = "vazio";
+        String InimigoSlot3 = "vazio";
+        String InimigoSlot4 = "vazio";
+        String InimigoSlot5 = "vazio";
 
 
 
 
 
         while(hp>0&&hpInimigo>0) {
-        if(cartaCampeao1.equals("vazio")) {
+        if(Slot1.equals("vazio")) {
             //Sorteio Cartas Campeao
-            cartaCampeao1 = cartas[(int) (Math.random() * 8)];
-            cartaCampeao2 = cartas[(int) (Math.random() * 8)];
-            cartaCampeao3 = cartas[(int) (Math.random() * 8)];
-            cartaCampeao4 = cartas[(int) (Math.random() * 8)];
-            cartaCampeao5 = cartas[(int) (Math.random() * 8)];
+           CampeaoSlot1 = cartas[(int) (Math.random() * 8)];
+            Slot2 = cartas[(int) (Math.random() * 8)];
+            Slot3 = cartas[(int) (Math.random() * 8)];
+            Slot4 = cartas[(int) (Math.random() * 8)];
+            Slot5 = cartas[(int) (Math.random() * 8)];
         }
-        String[] maoCampeao0 = {cartaCampeao1,cartaCampeao2,cartaCampeao3,cartaCampeao4,cartaCampeao5};
+        String[] maoCampeao0 = {Slot1,Slot2,Slot3,Slot4,Slot5};
 
         List<String> maoCampeao = Arrays.asList(maoCampeao0);
 
-        if(cartaInimigo1.equals("vazio")) {
+        if(InimigoSlot1.equals("vazio")) {
 
             //Sorteio cartas inimigo
-            cartaInimigo1 = cartasInimigo[(int) (Math.random() * 8)];
-            cartaInimigo2 = cartasInimigo[(int) (Math.random() * 8)];
-            cartaInimigo3 = cartasInimigo[(int) (Math.random() * 8)];
-            cartaInimigo4 = cartasInimigo[(int) (Math.random() * 8)];
-            cartaInimigo5 = cartasInimigo[(int) (Math.random() * 8)];
+            InimigoSlot1 = cartasInimigo[(int) (Math.random() * 8)];
+            InimigoSlot2 = cartasInimigo[(int) (Math.random() * 8)];
+            InimigoSlot3 = cartasInimigo[(int) (Math.random() * 8)];
+            InimigoSlot4 = cartasInimigo[(int) (Math.random() * 8)];
+            InimigoSlot5 = cartasInimigo[(int) (Math.random() * 8)];
         }
 
-        String[] maoInimigo0 = {cartaInimigo1,cartaInimigo2,cartaInimigo3,cartaInimigo4,cartaInimigo5};
+        String[] maoInimigo0 = {InimigoSlot1,InimigoSlot2,InimigoSlot3,InimigoSlot4,InimigoSlot5};
 
         List<String> maoInimigo = Arrays.asList(maoInimigo0);
 
@@ -76,26 +76,26 @@ public class Cartas {
                 int reposicao = maoCampeao.indexOf("Sem carta");
 
                 if(reposicao==0){
-                    cartaCampeao1 = cartas[(int) (Math.random() * 8)];
-                    System.out.println("Você ganhou a carta: "+cartaCampeao1);
+                   CampeaoSlot1 = cartas[(int) (Math.random() * 8)];
+                    System.out.println("Você ganhou a carta: "+Slot1);
                 }
                 if(reposicao==1){
-                    cartaCampeao2 = cartas[(int) (Math.random() * 8)];
-                    System.out.println("Você ganhou a carta: "+cartaCampeao2);
+                    Slot2 = cartas[(int) (Math.random() * 8)];
+                    System.out.println("Você ganhou a carta: "+Slot2);
                 }
                 if(reposicao==2){
-                    cartaCampeao3 = cartas[(int) (Math.random() * 8)];
-                    System.out.println("Você ganhou a carta: "+cartaCampeao3);
+                    Slot3 = cartas[(int) (Math.random() * 8)];
+                    System.out.println("Você ganhou a carta: "+Slot3);
                 }
                 if(reposicao==3){
-                    cartaCampeao4 = cartas[(int) (Math.random() * 8)];
-                    System.out.println("Você ganhou a carta: "+cartaCampeao4);
+                    Slot4 = cartas[(int) (Math.random() * 8)];
+                    System.out.println("Você ganhou a carta: "+Slot4);
                 }
                 if(reposicao==4){
-                    cartaCampeao5 = cartas[(int) (Math.random() * 8)];
-                    System.out.println("Você ganhou a carta: "+cartaCampeao5);
+                    Slot5 = cartas[(int) (Math.random() * 8)];
+                    System.out.println("Você ganhou a carta: "+Slot5);
                 }
-                maoCampeao0 = new String[]{cartaCampeao1, cartaCampeao2, cartaCampeao3, cartaCampeao4, cartaCampeao5};
+                maoCampeao0 = new String[]{Slot1, Slot2, Slot3, Slot4, Slot5};
                 maoCampeao = Arrays.asList(maoCampeao0);
                 System.out.println("-------------------------------------------------------------------------------");
             }
@@ -104,21 +104,21 @@ public class Cartas {
                 int reposicaoInimigo = maoInimigo.indexOf("Sem carta");
 
                 if(reposicaoInimigo==0){
-                    cartaInimigo1 = cartas[(int) (Math.random() * 8)];
+                    InimigoSlot1 = cartas[(int) (Math.random() * 8)];
                 }
                 if(reposicaoInimigo==1){
-                    cartaInimigo2 = cartas[(int) (Math.random() * 8)];
+                    InimigoSlot2 = cartas[(int) (Math.random() * 8)];
                 }
                 if(reposicaoInimigo==2){
-                    cartaInimigo3 = cartas[(int) (Math.random() * 8)];
+                    InimigoSlot3 = cartas[(int) (Math.random() * 8)];
                 }
                 if(reposicaoInimigo==3){
-                    cartaInimigo4 = cartas[(int) (Math.random() * 8)];
+                    InimigoSlot4 = cartas[(int) (Math.random() * 8)];
                 }
                 if(reposicaoInimigo==4){
-                    cartaInimigo5 = cartas[(int) (Math.random() * 8)];
+                    InimigoSlot5 = cartas[(int) (Math.random() * 8)];
                 }
-                maoInimigo0 = new String[]{cartaInimigo1, cartaInimigo2, cartaInimigo3, cartaInimigo4, cartaInimigo5};
+                maoInimigo0 = new String[]{InimigoSlot1, InimigoSlot2, InimigoSlot3, InimigoSlot4, InimigoSlot5};
                 maoInimigo = Arrays.asList(maoInimigo0);
             }
 
@@ -136,56 +136,56 @@ public class Cartas {
                 System.out.println("Você deu 1 de dano no seu inimigo: HP inimigo:" + hpInimigo);
                 encontrado = 0;
 
-                ultimaCarta = Carta1;
+                ultimaCartaCampeao = Carta1;
             }
             if (maoCampeao.contains(Carta2) && (Escolha.equals(Carta2)) && (encontrado == 1)) {
                 hpInimigo = hpInimigo - 2;
                 System.out.println("Você deu 2 de dano no seu inimigo: HP inimigo:" + hpInimigo);
                 encontrado = 0;
 
-                ultimaCarta = Carta2;
+                ultimaCartaCampeao = Carta2;
             }
             if (maoCampeao.contains(Carta3) && (Escolha.equals(Carta3)) && (encontrado == 1)) {
                 hpInimigo = hpInimigo - 3;
                 System.out.println("Você deu 3 de dano no seu inimigo: HP inimigo:" + hpInimigo);
                 encontrado = 0;
 
-                ultimaCarta = Carta3;
+                ultimaCartaCampeao = Carta3;
             }
             if (maoCampeao.contains(Carta4) && (Escolha.equals(Carta4)) && (encontrado == 1)) {
                 hpInimigo = hpInimigo - 4;
                 System.out.println("Você deu 4 de dano no seu inimigo: HP inimigo:" + hpInimigo);
                 encontrado = 0;
 
-                ultimaCarta = Carta4;
+                ultimaCartaCampeao = Carta4;
             }
             if (maoCampeao.contains(Carta5) && (Escolha.equals(Carta5)) && (encontrado == 1)) {
                 hpInimigo = hpInimigo - 5;
                 System.out.println("Você deu 5 de dano no seu inimigo: HP inimigo:" + hpInimigo);
                 encontrado = 0;
 
-                ultimaCarta = Carta5;
+                ultimaCartaCampeao = Carta5;
             }
             if (maoCampeao.contains(Carta6) && (Escolha.equals(Carta6)) && (encontrado == 1)) {
                 hpInimigo = hpInimigo - 6;
                 System.out.println("Você deu 6 de dano no seu inimigo: HP inimigo:" + hpInimigo);
                 encontrado = 0;
 
-                ultimaCarta = Carta6;
+                ultimaCartaCampeao = Carta6;
             }
             if (maoCampeao.contains(Carta7) && (Escolha.equals(Carta7)) && (encontrado == 1)) {
                 hpInimigo = hpInimigo - 7;
                 System.out.println("Você deu 7 de dano no seu inimigo: HP inimigo:" + hpInimigo);
                 encontrado = 0;
 
-                ultimaCarta = Carta7;
+                ultimaCartaCampeao = Carta7;
             }
             if (maoCampeao.contains(Carta8) && (Escolha.equals(Carta8)) && (encontrado == 1)) {
                 hpInimigo = hpInimigo - 8;
                 System.out.println("Você deu 8 de dano no seu inimigo: HP inimigo:" + hpInimigo);
                 encontrado = 0;
 
-                ultimaCarta = Carta8;
+                ultimaCartaCampeao = Carta8;
             }
             if (encontrado == 1) {
                 System.out.println("Carta inexistente.");
@@ -718,45 +718,45 @@ public class Cartas {
             System.out.println("-------------------------------------------------------------------------------");
 
             //Deletar a carta -CAMPEAO
-            int delete = maoCampeao.indexOf(ultimaCarta);
+            int delete = maoCampeao.indexOf(ultimaCartaCampeao);
             int deleteOk = 0;
             if(delete==0){
-                cartaCampeao1 = "Sem carta";
+               CampeaoSlot1 = "Sem carta";
                 deleteOk = 1;
             }
             if(delete==1 &&  deleteOk == 0){
-                cartaCampeao2 = "Sem carta";
+                Slot2 = "Sem carta";
                 deleteOk = 1;
             }
             if(delete==2 &&  deleteOk == 0){
-                cartaCampeao3 = "Sem carta";
+                Slot3 = "Sem carta";
                 deleteOk = 1;
             }
             if(delete==3 &&  deleteOk == 0){
-                cartaCampeao4 = "Sem carta";
+                Slot4 = "Sem carta";
                 deleteOk = 1;
             }
             if(delete==4 &&  deleteOk == 0){
-                cartaCampeao5 = "Sem carta";
+                Slot5 = "Sem carta";
             }
 
             //Deletar a carta -INIMIGO
             int deleteInimigo = maoInimigo.indexOf(ultimaCartaInimigo);
 
             if(deleteInimigo==0){
-                cartaInimigo1 = "Sem carta";
+                InimigoSlot1 = "Sem carta";
             }
             if(deleteInimigo==1){
-                cartaInimigo2 = "Sem carta";
+                InimigoSlot2 = "Sem carta";
             }
             if(deleteInimigo==2){
-                cartaInimigo3 = "Sem carta";
+                InimigoSlot3 = "Sem carta";
             }
             if(deleteInimigo==3){
-                cartaInimigo4 = "Sem carta";
+                InimigoSlot4 = "Sem carta";
             }
             if(deleteInimigo==4){
-                cartaInimigo5 = "Sem carta";
+                InimigoSlot5 = "Sem carta";
             }
 
         }

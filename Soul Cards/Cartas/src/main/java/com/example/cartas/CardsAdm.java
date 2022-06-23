@@ -4,122 +4,135 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CardsAdm {
-    public void main(String[] args) {
-        CardsStatistics CS = new CardsStatistics();
 
-        CS.nat_cobre();
+    //CARTAS
+    String Carta1 = "Carta1";
+    String Carta2 = "Carta2";
+    String Carta3 = "Carta3";
+    String Carta4 = "Carta4";
+    String Carta5 = "Carta5";
+    String Carta6 = "Carta6";
+    String Carta7 = "Carta7";
+    String Carta8 = "Carta8";
 
-        String Carta1 = "Carta1";
-        String Carta2 = "Carta2";
-        String Carta3 = "Carta3";
-        String Carta4 = "Carta4";
-        String Carta5 = "Carta5";
-        String Carta6 = "Carta6";
-        String Carta7 = "Carta7";
-        String Carta8 = "Carta8";
-
-        String ultimaCarta = null;
-        String ultimaCartaInimigo = null;
-
-        String[] cartas = {Carta1, CS.nat_cobre(), Carta3, Carta4, Carta5, Carta6, Carta7, Carta8};
-        String[] cartasInimigo = {Carta1, Carta2, Carta3, Carta4, Carta5, Carta6, Carta7, Carta8};
-
-        //CARTAS CAMPEAO
-        String cartaCampeao1 = "vazio";
-        String cartaCampeao2 = "vazio";
-        String cartaCampeao3 = "vazio";
-        String cartaCampeao4 = "vazio";
-        String cartaCampeao5 = "vazio";
-
-        //CARTAS INIMIGO
-        String cartaInimigo1 = "vazio";
-        String cartaInimigo2 = "vazio";
-        String cartaInimigo3 = "vazio";
-        String cartaInimigo4 = "vazio";
-        String cartaInimigo5 = "vazio";
+    //ULTIMA CARTA JOGADA
+    String ultimaCartaCampeao = null;
+    String ultimaCartaInimigo = null;
 
 
-        if (cartaCampeao1.equals("vazio")) {
+
+    //SLOTS CAMPEAO
+    String CampeaoSlot1 = "vazio";
+    String CampeaoSlot2 = "vazio";
+    String CampeaoSlot3 = "vazio";
+    String CampeaoSlot4 = "vazio";
+    String CampeaoSlot5 = "vazio";
+
+    //MATRIZES CAMPEAO
+    String[] cartas = {Carta1, Carta2, Carta3, Carta4, Carta5, Carta6, Carta7, Carta8};
+    String[] maoCampeao0 = {CampeaoSlot1, CampeaoSlot2, CampeaoSlot3, CampeaoSlot4, CampeaoSlot5};
+    List<String> maoCampeao = Arrays.asList();
+
+    //SLOTS INIMIGO
+    String InimigoSlot1 = "vazio";
+    String InimigoSlot2 = "vazio";
+    String InimigoSlot3 = "vazio";
+    String InimigoSlot4 = "vazio";
+    String InimigoSlot5 = "vazio";
+
+    //MATRIZES INIMIGO
+    String[] cartasInimigo = {Carta1, Carta2, Carta3, Carta4, Carta5, Carta6, Carta7, Carta8};
+
+    String[] maoInimigo0 = {InimigoSlot1, InimigoSlot2, InimigoSlot3, InimigoSlot4, InimigoSlot5};
+
+    List<String> maoInimigo = Arrays.asList(maoInimigo0);
+
+
+
+    //METODO DE SORTEIO CARTAS DO CAMPEAO
+    public void SorteioCartasCampeao() {
+
+        if (CampeaoSlot1.equals("vazio")) {
             //Sorteio Cartas Campeao
-            cartaCampeao1 = cartas[(int) (Math.random() * 8)];
-            cartaCampeao2 = cartas[(int) (Math.random() * 8)];
-            cartaCampeao3 = cartas[(int) (Math.random() * 8)];
-            cartaCampeao4 = cartas[(int) (Math.random() * 8)];
-            cartaCampeao5 = cartas[(int) (Math.random() * 8)];
+            CampeaoSlot1 = cartas[(int) (Math.random() * 8)];
+            CampeaoSlot2 = cartas[(int) (Math.random() * 8)];
+            CampeaoSlot3 = cartas[(int) (Math.random() * 8)];
+            CampeaoSlot4 = cartas[(int) (Math.random() * 8)];
+            CampeaoSlot5 = cartas[(int) (Math.random() * 8)];
         }
 
-        String[] maoCampeao0 = {cartaCampeao1, cartaCampeao2, cartaCampeao3, cartaCampeao4, cartaCampeao5};
+        maoCampeao0 = new String[]{CampeaoSlot1, CampeaoSlot2, CampeaoSlot3, CampeaoSlot4, CampeaoSlot5};
+        maoCampeao = Arrays.asList(maoCampeao0);
+    }
 
-        List<String> maoCampeao = Arrays.asList(maoCampeao0);
-
-        if (cartaInimigo1.equals("vazio")) {
-
-            //Sorteio cartas inimigo
-            cartaInimigo1 = cartasInimigo[(int) (Math.random() * 8)];
-            cartaInimigo2 = cartasInimigo[(int) (Math.random() * 8)];
-            cartaInimigo3 = cartasInimigo[(int) (Math.random() * 8)];
-            cartaInimigo4 = cartasInimigo[(int) (Math.random() * 8)];
-            cartaInimigo5 = cartasInimigo[(int) (Math.random() * 8)];
-        }
-
-        String[] maoInimigo0 = {cartaInimigo1, cartaInimigo2, cartaInimigo3, cartaInimigo4, cartaInimigo5};
-
-        List<String> maoInimigo = Arrays.asList(maoInimigo0);
-
+    //REPOSICAO DE CARTAS DO CAMPEAO
+    public void ReposicaoCampeao(){
         if (maoCampeao.contains("Sem carta")) {
-
 
             //Repor as cartas
             int reposicao = maoCampeao.indexOf("Sem carta");
 
             if (reposicao == 0) {
-                cartaCampeao1 = cartas[(int) (Math.random() * 8)];
-                System.out.println("Você ganhou a carta: " + cartaCampeao1);
+                CampeaoSlot1 = cartas[(int) (Math.random() * 8)];
             }
             if (reposicao == 1) {
-                cartaCampeao2 = cartas[(int) (Math.random() * 8)];
-                System.out.println("Você ganhou a carta: " + cartaCampeao2);
+                CampeaoSlot2 = cartas[(int) (Math.random() * 8)];
             }
             if (reposicao == 2) {
-                cartaCampeao3 = cartas[(int) (Math.random() * 8)];
-                System.out.println("Você ganhou a carta: " + cartaCampeao3);
+                CampeaoSlot3 = cartas[(int) (Math.random() * 8)];
             }
             if (reposicao == 3) {
-                cartaCampeao4 = cartas[(int) (Math.random() * 8)];
-                System.out.println("Você ganhou a carta: " + cartaCampeao4);
+                CampeaoSlot4 = cartas[(int) (Math.random() * 8)];
             }
             if (reposicao == 4) {
-                cartaCampeao5 = cartas[(int) (Math.random() * 8)];
-                System.out.println("Você ganhou a carta: " + cartaCampeao5);
+                CampeaoSlot5 = cartas[(int) (Math.random() * 8)];
             }
-            maoCampeao0 = new String[]{cartaCampeao1, cartaCampeao2, cartaCampeao3, cartaCampeao4, cartaCampeao5};
+            maoCampeao0 = new String[]{CampeaoSlot1, CampeaoSlot2, CampeaoSlot3, CampeaoSlot4, CampeaoSlot5};
             maoCampeao = Arrays.asList(maoCampeao0);
-            System.out.println("-------------------------------------------------------------------------------");
         }
+    }
+
+    //METODO DE SORTEIO CARTAS DO INIMIGO
+    public void SorteioCartasInimigo() {
+
+        if (InimigoSlot1.equals("vazio")) {
+
+            //Sorteio cartas inimigo
+            InimigoSlot1 = cartasInimigo[(int) (Math.random() * 8)];
+            InimigoSlot2 = cartasInimigo[(int) (Math.random() * 8)];
+            InimigoSlot3 = cartasInimigo[(int) (Math.random() * 8)];
+            InimigoSlot4 = cartasInimigo[(int) (Math.random() * 8)];
+            InimigoSlot5 = cartasInimigo[(int) (Math.random() * 8)];
+        }
+
+        maoInimigo0 = new String[]{InimigoSlot1, InimigoSlot2, InimigoSlot3, InimigoSlot4, InimigoSlot5};
+        maoInimigo = Arrays.asList(maoInimigo0);
+    }
+
+    //REPOSICAO DE CARTAS DO INIMIGO
+    public void ReposicaoInimigo(){
         if (maoInimigo.contains("Sem carta")) {
             //Repor as cartas - INIMIGO
             int reposicaoInimigo = maoInimigo.indexOf("Sem carta");
 
             if (reposicaoInimigo == 0) {
-                cartaInimigo1 = cartas[(int) (Math.random() * 8)];
+                InimigoSlot1 = cartas[(int) (Math.random() * 8)];
             }
             if (reposicaoInimigo == 1) {
-                cartaInimigo2 = cartas[(int) (Math.random() * 8)];
+                InimigoSlot2 = cartas[(int) (Math.random() * 8)];
             }
             if (reposicaoInimigo == 2) {
-                cartaInimigo3 = cartas[(int) (Math.random() * 8)];
+                InimigoSlot3 = cartas[(int) (Math.random() * 8)];
             }
             if (reposicaoInimigo == 3) {
-                cartaInimigo4 = cartas[(int) (Math.random() * 8)];
+                InimigoSlot4 = cartas[(int) (Math.random() * 8)];
             }
             if (reposicaoInimigo == 4) {
-                cartaInimigo5 = cartas[(int) (Math.random() * 8)];
+                InimigoSlot5 = cartas[(int) (Math.random() * 8)];
             }
-            maoInimigo0 = new String[]{cartaInimigo1, cartaInimigo2, cartaInimigo3, cartaInimigo4, cartaInimigo5};
-            maoInimigo = Arrays.asList(maoInimigo0);
 
+            maoInimigo0 = new String[]{InimigoSlot1, InimigoSlot2, InimigoSlot3, InimigoSlot4, InimigoSlot5};
+            maoInimigo = Arrays.asList(maoInimigo0);
         }
     }
-    }
-
-
+}
