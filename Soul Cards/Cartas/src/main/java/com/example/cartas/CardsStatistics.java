@@ -6,6 +6,7 @@ public class CardsStatistics {
     int custo;
     String joia;
     String metal;
+    String teste;
 
     //CARTAS
     String carta1;
