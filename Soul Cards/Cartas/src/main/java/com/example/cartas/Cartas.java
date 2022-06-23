@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Cartas {
     int round = 0;
     public static void main(String[] args) {
-        int hp = 2000000;
+        int hp = 20;
         int hpInimigo = 20;
 
 
