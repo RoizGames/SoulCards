@@ -9,72 +9,72 @@
    <children>
       <ImageView fx:id="imageDeck" fitHeight="100.0" fitWidth="150.0" layoutX="14.0" layoutY="486.0" onMouseClicked="#imageDeck" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../java/com/example/cartas/imagens/carta.png" />
+            <Image url="C:\Users\Pedro\Documents\GitHub\SoulCards\Soul Cards\Cartas\src\main\java/com/example/cartas/imagens/carta.png" />
          </image>
       </ImageView>
       <ImageView fx:id="imageCartaDois" fitHeight="100.0" fitWidth="150.0" layoutX="367.0" layoutY="436.0" onMouseClicked="#imageCartaDois" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../java/com/example/cartas/imagens/carta.png" />
+            <Image url="C:\Users\Pedro\Documents\GitHub\SoulCards\Soul Cards\Cartas\src\main\java/com/example/cartas/imagens/carta.png" />
          </image>
       </ImageView>
       <ImageView fx:id="imageCartaUm" fitHeight="100.0" fitWidth="150.0" layoutX="260.0" layoutY="436.0" onMouseClicked="#imageCartaUm" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../java/com/example/cartas/imagens/carta.png" />
+            <Image url="C:\Users\Pedro\Documents\GitHub\SoulCards\Soul Cards\Cartas\src\main\java/com/example/cartas/imagens/carta.png" />
          </image>
       </ImageView>
       <ImageView fx:id="imageCartaQuatro" fitHeight="100.0" fitWidth="150.0" layoutX="567.0" layoutY="436.0" onMouseClicked="#imageCartaQuatro" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../java/com/example/cartas/imagens/carta.png" />
+            <Image url="C:\Users\Pedro\Documents\GitHub\SoulCards\Soul Cards\Cartas\src\main\java/com/example/cartas/imagens/carta.png" />
          </image>
       </ImageView>
       <ImageView fx:id="imageCartaTres" fitHeight="100.0" fitWidth="150.0" layoutX="471.0" layoutY="436.0" onMouseClicked="#imageCartaTres" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../java/com/example/cartas/imagens/carta.png" />
+            <Image url="C:\Users\Pedro\Documents\GitHub\SoulCards\Soul Cards\Cartas\src\main\java/com/example/cartas/imagens/carta.png" />
          </image>
       </ImageView>
       <ImageView fx:id="imageCartaZero" fitHeight="100.0" fitWidth="150.0" layoutX="150.0" layoutY="436.0" onMouseClicked="#imageCartaZero" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../java/com/example/cartas/imagens/carta.png" />
+            <Image url="C:\Users\Pedro\Documents\GitHub\SoulCards\Soul Cards\Cartas\src\main\java/com/example/cartas/imagens/carta.png" />
          </image>
       </ImageView>
       <ImageView fx:id="carta3" fitHeight="100.0" fitWidth="150.0" layoutX="150.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../../../java/com/example/cartas/imagens/carta3.png" />
+            <Image url="C:\Users\Pedro\Documents\GitHub\SoulCards\Soul Cards\Cartas\src\main\java/com/example/cartas/imagens/carta3.png" />
          </image>
       </ImageView>
       <ImageView fx:id="carta7" fitHeight="100.0" fitWidth="150.0" layoutX="450.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../../../java/com/example/cartas/imagens/carta7.png" />
+            <Image url="C:\Users\Pedro\Documents\GitHub\SoulCards\Soul Cards\Cartas\src\main\java/com/example/cartas/imagens/carta7.png" />
          </image>
       </ImageView>
       <ImageView fx:id="carta8" fitHeight="100.0" fitWidth="150.0" layoutX="471.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../../../java/com/example/cartas/imagens/carta8.png" />
+            <Image url="C:\Users\Pedro\Documents\GitHub\SoulCards\Soul Cards\Cartas\src\main\java/com/example/cartas/imagens/carta8.png" />
          </image>
       </ImageView>
       <ImageView fx:id="carta5" fitHeight="100.0" fitWidth="150.0" layoutX="331.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../../../java/com/example/cartas/imagens/carta5.png" />
+            <Image url="C:\Users\Pedro\Documents\GitHub\SoulCards\Soul Cards\Cartas\src\main\java/com/example/cartas/imagens/carta5.png" />
          </image>
       </ImageView>
       <ImageView fx:id="carta6" fitHeight="100.0" fitWidth="150.0" layoutX="367.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../../../java/com/example/cartas/imagens/carta6.png" />
+            <Image url="C:\Users\Pedro\Documents\GitHub\SoulCards\Soul Cards\Cartas\src\main\java/com/example/cartas/imagens/carta6.png" />
          </image>
       </ImageView>
       <ImageView fx:id="carta2" fitHeight="100.0" fitWidth="150.0" layoutX="60.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../../../java/com/example/cartas/imagens/carta2.png" />
+            <Image url="C:\Users\Pedro\Documents\GitHub\SoulCards\Soul Cards\Cartas\src\main\java/com/example/cartas/imagens/carta2.png" />
          </image>
       </ImageView>
       <ImageView fx:id="carta1" fitHeight="100.0" fitWidth="150.0" layoutX="24.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../../../java/com/example/cartas/imagens/carta1.png" />
+            <Image url="C:\Users\Pedro\Documents\GitHub\SoulCards\Soul Cards\Cartas\src\main\java/com/example/cartas/imagens/carta1.png" />
          </image>
       </ImageView>
       <ImageView fx:id="carta4" fitHeight="100.0" fitWidth="150.0" layoutX="211.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../../../java/com/example/cartas/imagens/carta4.png" />
+            <Image url="C:\Users\Pedro\Documents\GitHub\SoulCards\Soul Cards\Cartas\src\main\java/com/example/cartas/imagens/carta4.png" />
          </image>
       </ImageView>
    </children>

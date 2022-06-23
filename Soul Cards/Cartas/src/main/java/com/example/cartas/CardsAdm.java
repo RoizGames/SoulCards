@@ -6,46 +6,46 @@ import java.util.List;
 public class CardsAdm {
 
     //CARTAS
-    String Carta1 = "Carta1";
-    String Carta2 = "Carta2";
-    String Carta3 = "Carta3";
-    String Carta4 = "Carta4";
-    String Carta5 = "Carta5";
-    String Carta6 = "Carta6";
-    String Carta7 = "Carta7";
-    String Carta8 = "Carta8";
+    public String Carta1 = "Carta1";
+    public String Carta2 = "Carta2";
+    public String Carta3 = "Carta3";
+    public String Carta4 = "Carta4";
+    public String Carta5 = "Carta5";
+    public String Carta6 = "Carta6";
+    public String Carta7 = "Carta7";
+    public String Carta8 = "Carta8";
 
     //ULTIMA CARTA JOGADA
-    String ultimaCartaCampeao = null;
-    String ultimaCartaInimigo = null;
+    public String ultimaCartaCampeao = null;
+    public String ultimaCartaInimigo = null;
 
 
 
     //SLOTS CAMPEAO
-    String CampeaoSlot1 = "vazio";
-    String CampeaoSlot2 = "vazio";
-    String CampeaoSlot3 = "vazio";
-    String CampeaoSlot4 = "vazio";
-    String CampeaoSlot5 = "vazio";
+    public String CampeaoSlot1 = "vazio";
+    public String CampeaoSlot2 = "vazio";
+    public String CampeaoSlot3 = "vazio";
+    public String CampeaoSlot4 = "vazio";
+    public String CampeaoSlot5 = "vazio";
 
     //MATRIZES CAMPEAO
-    String[] cartas = {Carta1, Carta2, Carta3, Carta4, Carta5, Carta6, Carta7, Carta8};
-    String[] maoCampeao0 = {CampeaoSlot1, CampeaoSlot2, CampeaoSlot3, CampeaoSlot4, CampeaoSlot5};
+    public String[] cartas = {Carta1, Carta2, Carta3, Carta4, Carta5, Carta6, Carta7, Carta8};
+    public String[] maoCampeao0 = {CampeaoSlot1, CampeaoSlot2, CampeaoSlot3, CampeaoSlot4, CampeaoSlot5};
     List<String> maoCampeao = Arrays.asList();
 
     //SLOTS INIMIGO
-    String InimigoSlot1 = "vazio";
-    String InimigoSlot2 = "vazio";
-    String InimigoSlot3 = "vazio";
-    String InimigoSlot4 = "vazio";
-    String InimigoSlot5 = "vazio";
+    public String InimigoSlot1 = "vazio";
+    public String InimigoSlot2 = "vazio";
+    public String InimigoSlot3 = "vazio";
+    public String InimigoSlot4 = "vazio";
+    public String InimigoSlot5 = "vazio";
 
     //MATRIZES INIMIGO
-    String[] cartasInimigo = {Carta1, Carta2, Carta3, Carta4, Carta5, Carta6, Carta7, Carta8};
+    public String[] cartasInimigo = {Carta1, Carta2, Carta3, Carta4, Carta5, Carta6, Carta7, Carta8};
 
-    String[] maoInimigo0 = {InimigoSlot1, InimigoSlot2, InimigoSlot3, InimigoSlot4, InimigoSlot5};
+    public String[] maoInimigo0 = {InimigoSlot1, InimigoSlot2, InimigoSlot3, InimigoSlot4, InimigoSlot5};
 
-    List<String> maoInimigo = Arrays.asList(maoInimigo0);
+    public List<String> maoInimigo = Arrays.asList(maoInimigo0);
 
 
 
