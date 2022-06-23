@@ -8,7 +8,7 @@ public class Cartas {
     int round = 0;
     public static void main(String[] args) {
         int hp = 20;
-        int hpInimigo = 20;
+        int hpInimigo = 20000;
 
 
         String Carta1 = "Carta1";
