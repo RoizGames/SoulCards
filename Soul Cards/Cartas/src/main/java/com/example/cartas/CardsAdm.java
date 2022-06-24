@@ -34,7 +34,7 @@ public class CardsAdm {
     //MATRIZES CAMPEAO
     public String[] cartas = {Carta1, Carta2, Carta3, Carta4, Carta5, Carta6, Carta7, Carta8};
     public String[] maoCampeao0 = {CampeaoSlot1, CampeaoSlot2, CampeaoSlot3, CampeaoSlot4, CampeaoSlot5};
-    public List<String> maoCampeao = Arrays.asList();
+    public static List<String> maoCampeao = Arrays.asList();
 
     //SLOTS INIMIGO
     public String InimigoSlot1 = "vazio";
@@ -199,6 +199,29 @@ public class CardsAdm {
         }
         hpInimigoShow = String.valueOf(enemy.hpInimigo);
 
+        int delete = maoCampeao.indexOf(ultimaCartaCampeao);
+        int deleteOk = 0;
+        if(delete==0){
+            CampeaoSlot1 = "Sem carta";
+            deleteOk = 1;
+        }
+        if(delete==1 &&  deleteOk == 0){
+            CampeaoSlot2 = "Sem carta";
+            deleteOk = 1;
+        }
+        if(delete==2 &&  deleteOk == 0){
+            CampeaoSlot3 = "Sem carta";
+            deleteOk = 1;
+        }
+        if(delete==3 &&  deleteOk == 0){
+            CampeaoSlot4 = "Sem carta";
+            deleteOk = 1;
+        }
+        if(delete==4 &&  deleteOk == 0){
+            CampeaoSlot5 = "Sem carta";
+        }
+        maoCampeao0 = new String[]{CampeaoSlot1, CampeaoSlot2, CampeaoSlot3, CampeaoSlot4, CampeaoSlot5};
+        maoCampeao = Arrays.asList(maoCampeao0);
 
     }
     public void AtaqueInimigo(){
@@ -727,6 +750,24 @@ public class CardsAdm {
             }
         }
         hpCampeaoShow = String.valueOf(champ.hp);
+
+        int deleteInimigo = maoInimigo.indexOf(ultimaCartaInimigo);
+
+        if(deleteInimigo==0){
+            InimigoSlot1 = "Sem carta";
+        }
+        if(deleteInimigo==1){
+            InimigoSlot2 = "Sem carta";
+        }
+        if(deleteInimigo==2){
+            InimigoSlot3 = "Sem carta";
+        }
+        if(deleteInimigo==3){
+            InimigoSlot4 = "Sem carta";
+        }
+        if(deleteInimigo==4){
+            InimigoSlot5 = "Sem carta";
+        }
     }
 
 }
