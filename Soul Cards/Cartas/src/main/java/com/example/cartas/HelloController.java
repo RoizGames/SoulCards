@@ -1,13 +1,22 @@
 package com.example.cartas;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 
 public class HelloController {
     CardsAdm ca = new CardsAdm();
+    Inimigo enemy = new Inimigo();
+    static Campeao champ = new Campeao();
 
+    @FXML
+    private Button BotaoJogar;
 
+    @FXML
+    private ImageView imageCartaInimigo;
     @FXML
     private ImageView carta1;
 
@@ -51,6 +60,23 @@ public class HelloController {
     private ImageView imageDeck;
 
     @FXML
+    private Text intHp;
+
+    @FXML
+    private Text intHpInimigo;
+
+    @FXML
+    private Text txtHp;
+
+    @FXML
+    private Text txtHpInimigo;
+
+    @FXML
+    void BotaoJogar(ActionEvent event) {
+
+    }
+
+        @FXML
     void imageCartaDois(MouseEvent event) {
         ca.Escolha = ca.CampeaoSlot3;
         ca.Batalha();
@@ -60,6 +86,7 @@ public class HelloController {
     void imageCartaQuatro(MouseEvent event) {
         ca.Escolha = ca.CampeaoSlot5;
         ca.Batalha();
+
     }
 
     @FXML
@@ -73,13 +100,20 @@ public class HelloController {
     void imageCartaUm(MouseEvent event) {
         ca.Escolha = ca.CampeaoSlot2;
         ca.Batalha();
-
+        intHpInimigo.setText(ca.hpInimigoShow);
+        imageCartaZero.setDisable(true);
     }
 
     @FXML
     void imageCartaZero(MouseEvent event) {
+        ca.SorteioCartasInimigo();
         ca.Escolha = ca.CampeaoSlot1;
+
         ca.Batalha();
+
+        ca.AtaqueInimigo();
+        System.out.println("olá");
+
 
     }
 

@@ -14,6 +14,8 @@ public class CardsStatistics {
     Campeao champ = new Campeao();
     Inimigo enemy = new Inimigo();
 
+
+
     //AÇÕES
 
     //CARTAS NATUREZA
@@ -43,6 +45,7 @@ public class CardsStatistics {
     public void vazio_cobre() {
         enemy.hpInimigo = enemy.hpInimigo - 3;
         custo = 2;
+
     }
 
     public void vazio_alum() {

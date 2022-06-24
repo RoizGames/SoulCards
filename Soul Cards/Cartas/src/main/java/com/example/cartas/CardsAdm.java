@@ -5,6 +5,9 @@ import java.util.List;
 
 public class CardsAdm {
 
+    public String hpCampeaoShow;
+    public String hpInimigoShow;
+
     //CARTAS
     public String Carta1 = "Carta1";
     public String Carta2 = "Carta2";
@@ -50,6 +53,8 @@ public class CardsAdm {
     
     Campeao champ = new Campeao();
     Inimigo enemy = new Inimigo();
+
+
     public String Escolha;
 
     //METODO DE SORTEIO CARTAS DO CAMPEAO
@@ -192,7 +197,7 @@ public class CardsAdm {
         if (encontrado == 1) {
             System.out.println("Carta inexistente.");
         }
-        System.out.println(enemy.hpInimigo);
+        hpInimigoShow = String.valueOf(enemy.hpInimigo);
 
 
     }
@@ -721,7 +726,7 @@ public class CardsAdm {
                 }
             }
         }
-        System.out.println(champ.hp);
+        hpCampeaoShow = String.valueOf(champ.hp);
     }
 
 }
