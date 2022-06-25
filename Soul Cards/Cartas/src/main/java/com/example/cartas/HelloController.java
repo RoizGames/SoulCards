@@ -116,13 +116,7 @@ public class HelloController {
 
 
         }
-        if(ca.enemy.hpInimigo<=0) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Soul Cards");
-            alert.setHeaderText("Vitoria");
 
-            alert.showAndWait();
-        }
     }
     void BatalhaIT(){
         ca.AtaqueInimigo();
@@ -332,6 +326,21 @@ public class HelloController {
 
             BotaoJogar.setText("Jogar");
             System.out.println(ca.ultimaCartaInimigo);
+
+            EscolhaSlot1 = null;
+            EscolhaSlot2 = null;
+            EscolhaSlot3 = null;
+            EscolhaSlot4 = null;
+            EscolhaSlot5 = null;
+
+        }
+
+        if(ca.enemy.hpInimigo<=0) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Soul Cards");
+            alert.setHeaderText("Vitoria");
+
+            alert.showAndWait();
         }
     }
 
