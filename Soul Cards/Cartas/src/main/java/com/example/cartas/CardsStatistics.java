@@ -19,11 +19,10 @@ public class CardsStatistics {
     //AÇÕES
 
     //CARTAS NATUREZA
-    public String nat_cobre() {
+    /*public String nat_cobre() {
         champ.hp = champ.hp + 2;
         custo = 1;
-        return carta1;
-    }
+    }*/
 
     public void nat_alum() {
         champ.hp = champ.hp + 3;
