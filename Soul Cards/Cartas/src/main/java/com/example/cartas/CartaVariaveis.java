@@ -1,30 +1,30 @@
 package com.example.cartas;
 
 public class CartaVariaveis {
-    private int dano;
-    private int cura;
+    private double dano;
+    private double cura;
     private int custo;
 
 
-    public CartaVariaveis (int dano, int cura, int custo){
+    public CartaVariaveis (double dano, double cura, int custo){
         this.dano = dano;
         this.cura = cura;
         this.custo = custo;
     }
 
-    public int getDano() {
+    public double getDano() {
         return dano;
     }
 
-    public void setDano(int dano) {
+    public void setDano(double dano) {
         this.dano = dano;
     }
 
-    public int getCura() {
+    public double getCura() {
         return cura;
     }
 
-    public void setCura(int cura) {
+    public void setCura(double cura) {
         this.cura = cura;
     }
 

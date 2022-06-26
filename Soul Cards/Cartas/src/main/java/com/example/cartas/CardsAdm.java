@@ -31,6 +31,8 @@ public class CardsAdm {
     public String CampeaoSlot4 = "vazio";
     public String CampeaoSlot5 = "vazio";
 
+    public int[] dsa = {1 - 5};
+
     //MATRIZES CAMPEAO
     public String[] cartas = {Carta1, Carta2, Carta3, Carta4, Carta5, Carta6, Carta7, Carta8};
     public String[] maoCampeao0 = {CampeaoSlot1, CampeaoSlot2, CampeaoSlot3, CampeaoSlot4, CampeaoSlot5};
@@ -768,6 +770,41 @@ public class CardsAdm {
         if(deleteInimigo==4){
             InimigoSlot5 = "Sem carta";
         }
+    }
+    public void AtaqueInimigo2(){
+        String Escolha = "";
+        int PosseCarta = 0;
+        switch (Escolha) {
+            case "Carta1":
+                switch (PosseCarta){
+                    case 1:
+
+                        break;
+                    case 2:
+
+                        break;
+                    case 3:
+
+                        break;
+                    case 4:
+
+                        break;
+                    case 5:
+
+                        break;
+                    case 6:
+
+                        break;
+                    case 7:
+
+                        break;
+                    case 8:
+
+                        break;
+
+                }
+        }
+
     }
 
 }
