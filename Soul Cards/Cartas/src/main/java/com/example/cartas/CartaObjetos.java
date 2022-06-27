@@ -4,9 +4,8 @@ public class CartaObjetos {
 
 
 
-    public static void main(String[] args) {
-        Campeao campeao = new Campeao();
-        Inimigo inimigo = new Inimigo();
+        static Campeao campeao = new Campeao();
+        static Inimigo inimigo = new Inimigo();
 
         CartaVariaveis NaturezaCobre = new CartaVariaveis(0, 2, 1);
         CartaVariaveis NaturezaAluminio = new CartaVariaveis(0, 3, 2);
@@ -29,16 +28,18 @@ public class CartaObjetos {
         CartaVariaveis UniversoOuro = new CartaVariaveis(0,0,0); //Troca de carta com o adversário (Só uma carta, depois reseta as cartas do inimigo)
 
         //CARTAS MISTAS
-        CartaVariaveis VazioLuzCobre = new CartaVariaveis(3,-3,3);
+        static CartaVariaveis VazioLuzCobre = new CartaVariaveis(3,-3,3);
         CartaVariaveis VazioLuzAluminio = new CartaVariaveis(0,0,0); //COPIAR CARTA DO PROPRIO DECK
 
+    public static void main(String[] args) {
 
         //Joga a carta natureza cobre
         VazioLuzCobre.jogaCarta();
 
         //Status após a jogada
-        System.out.println("Vida do campeão: " +campeao.hp);
-        System.out.println("Energia do campeão: " +campeao.energia);
-        System.out.println("Vida do inimigo: " +inimigo.hpInimigo);
+        System.out.println("Vida do campeão: " + campeao.hp);
+        System.out.println("Energia do campeão: " + campeao.energia);
+        System.out.println("Vida do inimigo: " + inimigo.hpInimigo);
     }
+
 }
