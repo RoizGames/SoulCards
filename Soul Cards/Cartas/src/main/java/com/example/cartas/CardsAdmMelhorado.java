@@ -1,6 +1,5 @@
 package com.example.cartas;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class CardsAdmMelhorado {
@@ -136,7 +135,7 @@ public class CardsAdmMelhorado {
         }
     }
     public void AtaqueInimigo() {
-
+        //NIVEIS DE HP
         boolean hpCampeaoBaixo = campeao.hp<=10;
         boolean hpCampeaoMedio = campeao.hp>=11 && campeao.hp<=19;
         boolean hpCampeaoAlto = campeao.hp>=20;
@@ -145,25 +144,37 @@ public class CardsAdmMelhorado {
         boolean hpInimigoMedio = Inimigo.hpInimigo>=11 && Inimigo.hpInimigo<=19;
         boolean hpInimigoAlto = Inimigo.hpInimigo>=20;
 
+        //HUMOR
         boolean raiva;
+        boolean ansiedade;
 
+        //ESTRATEGIA
+        boolean estrategia1;
+        boolean estrategia2;
 
+        //NIVEIS DE ENERGIA
+        boolean energiaBaixa = inimigo.getEnergiaEnemy()<=1;
+        boolean energiaMedia = inimigo.getEnergiaEnemy()>1 && inimigo.getEnergiaEnemy()<=6;
+        boolean energiaAlta = inimigo.getEnergiaEnemy()>7;
+
+        if(energiaBaixa){
+
+        }else if(energiaMedia){
+
+        }else if(energiaAlta){
+
+        }
     }
 
     public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(5,11);
 
-            double hpAnterior = inimigo.getHpInimigo();
+        System.out.println(inRange(list, 0, 10));
+    }
 
-            acao.VazioAluminio.jogaCarta();
-            boolean raiva = hpAnterior-inimigo.getHpInimigo()>2;
-            System.out.println("Inimigo com raiva? "+raiva);
+    private static boolean inRange(List<Integer> list, int min, int max) {
+        return list.stream().allMatch(i -> i >= min && i <= max);
+    }
 
-            //Status após a jogada
-            System.out.println("Vida do campeão: " + campeao.hp);
-            System.out.println("Energia do campeão: " + campeao.energia);
-            System.out.println("Vida do inimigo: " + inimigo.hpInimigo);
-
-
-        }
     }
 
