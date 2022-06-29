@@ -1,8 +1,8 @@
 package com.example.cartas;
 
 public class Campeao {
-    double hp = 20;
-    int energia = 1;
+    static double hp = 20;
+    static int energia = 20;
     int escudo = 0;
     String classe;
 
@@ -11,7 +11,15 @@ public class Campeao {
         Inimigo enemy = new Inimigo();
 
         while(c.round < c.round+3){
-            enemy.hpEnemy = enemy.hpEnemy - 1;
+            enemy.hpInimigo = enemy.hpInimigo - 1;
         }
+    }
+
+    public double getHp() {
+        return hp;
+    }
+
+    public int getEnergia() {
+        return energia;
     }
 }
