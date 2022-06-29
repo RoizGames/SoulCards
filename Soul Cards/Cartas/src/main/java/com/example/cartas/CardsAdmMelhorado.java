@@ -48,7 +48,7 @@ public class CardsAdmMelhorado {
 
     //REPOSICAO DE CARTAS DO CAMPEAO
     public static void ReposicaoCampeao() {
-        maoCampeao.set(maoCampeao.indexOf(0), (int) (Math.random() * 17+1));
+        maoCampeao.set(maoCampeao.indexOf(0), (int) (Math.random() * 17 + 1));
     }
 
     //METODO DE SORTEIO CARTAS DO INIMIGO
@@ -60,21 +60,21 @@ public class CardsAdmMelhorado {
         maoInimigo = Arrays.asList(arr);
     }
 
-    public static void DeleteCampeao(){
-        maoCampeao.set(maoCampeao.indexOf(Escolha),0);
+    public static void DeleteCampeao() {
+        maoCampeao.set(maoCampeao.indexOf(Escolha), 0);
     }
 
-    public static void DeleteInimigo(){
-        maoInimigo.set(maoInimigo.indexOf(ultimaCartaInimigo),0);
+    public static void DeleteInimigo() {
+        maoInimigo.set(maoInimigo.indexOf(ultimaCartaInimigo), 0);
     }
 
     //REPOSICAO DE CARTAS DO INIMIGO
     public void ReposicaoInimigo() {
-        maoInimigo.set(maoInimigo.indexOf(0), (int) (Math.random() * 17+1));
+        maoInimigo.set(maoInimigo.indexOf(0), (int) (Math.random() * 17 + 1));
     }
 
     public static void Batalha() {
-        if(maoCampeao.contains(Escolha)) {
+        if (maoCampeao.contains(Escolha)) {
             switch (Escolha) {
                 case 1:
                     acao.NaturezaCobre.jogaCarta();
@@ -134,47 +134,53 @@ public class CardsAdmMelhorado {
             ultimaCartaCampeao = Escolha;
         }
     }
+
     public void AtaqueInimigo() {
         //NIVEIS DE HP
-        boolean hpCampeaoBaixo = campeao.hp<=10;
-        boolean hpCampeaoMedio = campeao.hp>=11 && campeao.hp<=19;
-        boolean hpCampeaoAlto = campeao.hp>=20;
 
-        boolean hpInimigoBaixo = Inimigo.hpInimigo<=10;
-        boolean hpInimigoMedio = Inimigo.hpInimigo>=11 && Inimigo.hpInimigo<=19;
-        boolean hpInimigoAlto = Inimigo.hpInimigo>=20;
 
         //HUMOR
-        boolean raiva;
-        boolean ansiedade;
+
 
         //ESTRATEGIA
         boolean estrategia1;
         boolean estrategia2;
 
         //NIVEIS DE ENERGIA
-        boolean energiaBaixa = inimigo.getEnergiaEnemy()<=1;
-        boolean energiaMedia = inimigo.getEnergiaEnemy()>1 && inimigo.getEnergiaEnemy()<=6;
-        boolean energiaAlta = inimigo.getEnergiaEnemy()>7;
+        boolean energiaBaixa = inimigo.getEnergiaEnemy() <= 1;
+        boolean energiaMedia = inimigo.getEnergiaEnemy() > 1 && inimigo.getEnergiaEnemy() <= 6;
+        boolean energiaAlta = inimigo.getEnergiaEnemy() > 7;
 
-        if(energiaBaixa){
 
-        }else if(energiaMedia){
+        //EQUACAO
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int) (Math.random() * 17 + 1);
 
-        }else if(energiaAlta){
+        }
+        maoInimigo = Arrays.asList(arr);
+        if (energiaBaixa) {
+            if(maoInimigo.contains(1)||maoInimigo.contains(2)
+                    ||maoInimigo.contains(3)||maoInimigo.contains(4)){
+
+            }
+
+        } else if (energiaMedia) {
+
+        } else if (energiaAlta) {
 
         }
     }
 
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(5,11);
 
-        System.out.println(inRange(list, 0, 10));
+
+        if(maoInimigo.contains(1)){
+
+        }
     }
 
-    private static boolean inRange(List<Integer> list, int min, int max) {
-        return list.stream().allMatch(i -> i >= min && i <= max);
-    }
 
-    }
+
+}
+
 
