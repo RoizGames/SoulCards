@@ -3,7 +3,10 @@ package com.example.cartas;
 import static com.example.cartas.CardsAdmMelhorado.*;
 
 public class ConjuntoMaos {
+    CartaObjetos carta = new CartaObjetos();
+    EstruturaInteligencia funcao = new EstruturaInteligencia();
     private int turno;
+    private String qualFuncao;
 
     boolean humorRaiva;
     boolean humorNormal;
@@ -61,10 +64,43 @@ public class ConjuntoMaos {
     public void setCartaPosse4(int cartaPosse4) {
         this.cartaPosse4 = cartaPosse4;
     }
-    public void jogaCartaInimigo(){
-        if(maoInimigo.contains(cartaPosse1)||maoInimigo.contains(cartaPosse2)
-        ||maoInimigo.contains(cartaPosse3)||maoInimigo.contains(cartaPosse4)){
+    public void jogaCartaInimigo() {
+        if (maoInimigo.contains(cartaPosse1) || maoInimigo.contains(cartaPosse2)
+                || maoInimigo.contains(cartaPosse3) || maoInimigo.contains(cartaPosse4)) {
+            if (qualFuncao.equals("cura")) {
+                if (maoInimigo.contains(cartaPosse4)) {
+                    carta.NaturezaOuro.jogaCarta();
+                } else if (maoInimigo.contains(cartaPosse3)) {
+                    carta.NaturezaFerro.jogaCarta();
+                } else if (maoInimigo.contains(cartaPosse2)) {
+                    carta.NaturezaAluminio.jogaCarta();
+                } else if (maoInimigo.contains(cartaPosse1)) {
+                    carta.NaturezaCobre.jogaCarta();
+                }
+                if (qualFuncao.equals("dano")) {
+                    if (maoInimigo.contains(cartaPosse4)) {
+                        carta.VazioOuro.jogaCarta();
+                    } else if (maoInimigo.contains(cartaPosse3)) {
+                        carta.VazioFerro.jogaCarta();
+                    } else if (maoInimigo.contains(cartaPosse2)) {
+                        carta.VazioAluminio.jogaCarta();
+                    } else if (maoInimigo.contains(cartaPosse1)) {
+                        carta.VazioCobre.jogaCarta();
+                    }
+                    if (qualFuncao.equals("mitigacao")) {
+                        if (maoInimigo.contains(cartaPosse4)) {
+                            carta.VazioOuro.jogaCarta();
+                        } else if (maoInimigo.contains(cartaPosse3)) {
+                            carta.VazioFerro.jogaCarta();
+                        } else if (maoInimigo.contains(cartaPosse2)) {
+                            carta.VazioAluminio.jogaCarta();
+                        } else if (maoInimigo.contains(cartaPosse1)) {
+                            carta.VazioCobre.jogaCarta();
+                        }
+                    }
 
+                }
+            }
         }
     }
 
@@ -74,6 +110,7 @@ public class ConjuntoMaos {
             if (hpInimigoBaixo) { //HP DO INIMIGO BAIXO
                 if (hpCampeaoBaixo) {
                     if (humorNormal) {
+                        funcao.cura.jogaCartaInimigo();
 
                     }
                     if (humorRaiva) {
@@ -154,5 +191,7 @@ public class ConjuntoMaos {
 
         }
         }
-    }
+
+
+}
 
